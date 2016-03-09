@@ -1,0 +1,43 @@
+﻿@using SitoDeiSiti.Models
+@model IEnumerable<Sito>
+@{
+    ViewBag.Title = "Siti";
+}
+@{
+    <div class="page-header">
+        <h1>
+            Sito dei siti<br />
+            <small>5L Informatica</small>
+        </h1>
+    </div>
+    int cnt = 1;
+    @Html.Raw("<div class='row'>");
+    foreach (Sito siti in Model)
+    {
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <center>
+                    <a href="@siti.Link" target="_blank">
+                        <img style="max-width: 348px; height: 245px;" src="@siti.PhotoLink" alt="@siti.Nome" onError="this.onerror = null; this.src = 'http://sitodeisiti.gear.host/Content/Images/avatar.jpg';">
+                    </a>
+                </center>
+                <div class="caption">
+                    <center>
+                        <h3>@siti.Nome.Split(' ')[1]</h3>
+                        <p>@siti.Nome.Split(' ')[0]</p>
+                        <p><a href="@siti.Link" class="btn btn-primary" role="button" target="_blank">@siti.Nome</a></p>
+                    </center>
+                </div>
+            </div>
+        </div>
+
+        if (cnt % 3 == 0)
+        {
+            @Html.Raw("</div>");
+            @Html.Raw("<br/>");
+            @Html.Raw("<div class='row'>");
+        }
+        cnt++;
+    }
+    @Html.Raw("</div>");
+}

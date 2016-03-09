@@ -1,0 +1,47 @@
+﻿@model string
+@{
+    ViewBag.Title = "Info";
+}
+<div class="row">
+    <div class="page-header">
+        <h1>Archivio dei dati <small>ricevi direttamente i dati</small></h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-6 col-md-4">
+        <a href="#" class="thumbnail" data-toggle="modal" data-target="#myModal">
+            <img style="max-width: 348px; max-height: 245px;" src="~/Content/Images/rss.png" alt="Rss Feed">
+        </a>
+    </div>
+    <div class="col-xs-6 col-md-4">
+        <a href="https://github.com/zambianchi/sitodeisiti" class="thumbnail" target="_blank">
+            <img style="max-width: 348px; max-height: 245px;" src="~/Content/Images/github.gif" alt="GitHub">
+        </a>
+    </div>
+    <div class="col-xs-6 col-md-4">
+        <a href="https://drive.google.com/a/maurizioconti.com/folderview?id=0B5GgW_C3GeHyaklPanhWR0VLSUk&usp=sharing" class="thumbnail" target="_blank">
+            <img style="max-width: 348px; max-height: 245px;" src="~/Content/Images/drive.png" alt="Google Drive">
+        </a>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">XML</h4>
+            </div>
+            <div class="modal-body">
+                <p><pre>@Model</pre></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Chiudi</button>
+            </div>
+        </div>
+
+    </div>
+</div>
