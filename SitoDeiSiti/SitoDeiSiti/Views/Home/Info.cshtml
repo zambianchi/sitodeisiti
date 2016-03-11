@@ -2,46 +2,135 @@
 @{
     ViewBag.Title = "Info";
 }
-<div class="row">
-    <div class="page-header">
-        <h1>Archivio dei dati <small>ricevi direttamente i dati</small></h1>
-    </div>
-</div>
-<div class="row">
-    <div class="col-xs-6 col-md-4">
-        <a href="#" class="thumbnail" data-toggle="modal" data-target="#myModal">
-            <img style="max-width: 348px; max-height: 245px;" src="~/Content/Images/rss.png" alt="Rss Feed">
-        </a>
-    </div>
-    <div class="col-xs-6 col-md-4">
-        <a href="https://github.com/zambianchi/sitodeisiti" class="thumbnail" target="_blank">
-            <img style="max-width: 348px; max-height: 245px;" src="~/Content/Images/github.gif" alt="GitHub">
-        </a>
-    </div>
-    <div class="col-xs-6 col-md-4">
-        <a href="https://drive.google.com/a/maurizioconti.com/folderview?id=0B5GgW_C3GeHyaklPanhWR0VLSUk&usp=sharing" class="thumbnail" target="_blank">
-            <img style="max-width: 348px; max-height: 245px;" src="~/Content/Images/drive.png" alt="Google Drive">
-        </a>
-    </div>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">XML</h4>
-            </div>
-            <div class="modal-body">
-                <p><pre>@Model</pre></p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Chiudi</button>
+<section id="descProgetti">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Dove trovare i progetti completati</h2>
+                <hr class="primary">
             </div>
         </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-rss wow bounceIn text-primary"></i>
+                    <h3>File XML</h3>
+                    <p class="text-muted">File XML contenente tutti i dati GearHost di ogni alunno.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-github wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                    <h3>GitHub</h3>
+                    <p class="text-muted">Il progetto SitiDeiSiti è mantenuto aggiornato su GitHub.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-google wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                    <h3>Google Drive</h3>
+                    <p class="text-muted">Tutti i progetti e i materiali sono accessibili da Google Drive</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="row">
+    <div class="container-fluid">
+        <div class="row no-gutter">
+            <div class="col-lg-4 col-sm-6">
+                <div class="thumbnail">
+                    <a href="#" class="portfolio-box" data-toggle="modal" data-target="#myModal" style="text-decoration: none">
+                        <center><img style="max-width: 348px; height: 245px;" src="~/Content/Images/rss.png" class="img-responsive" alt=""></center>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Base file
+                                </div>
+                                <div class="project-name">
+                                    File XML contenente i nominativi degli alunni
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <center>
+                                <h3>File XML</h3>
+                                <p>Nominativi e siti</p>
+                            </center>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="thumbnail">
+                    <a href="https://github.com/zambianchi/sitodeisiti" class="portfolio-box" style="text-decoration: none">
+                        <center><img style="max-width: 348px; height: 245px;" src="~/Content/Images/github.gif" class="img-responsive" alt=""></center>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Progetto
+                                </div>
+                                <div class="project-name">
+                                    Progetto inserito su GitHub
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <center>
+                                <h3>Progetto</h3>
+                                <p>GitHub</p>
+                            </center>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
+            <div class="col-lg-4 col-sm-6">
+                <div class="thumbnail">
+                    <a href="https://drive.google.com/a/maurizioconti.com/folderview?id=0B5GgW_C3GeHyaklPanhWR0VLSUk&usp=sharing" class="portfolio-box" style="text-decoration: none">
+                        <center><img style="max-width: 348px; height: 245px;" src="~/Content/Images/drive.png" class="img-responsive" alt=""></center>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Materiali e consegne
+                                </div>
+                                <div class="project-name">
+                                    Cartella Google Drive per i materiali e i progetti consegnati
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <center>
+                                <h3>Google Drive</h3>
+                                <p>Materiali e progetti</p>
+                            </center>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">XML</h4>
+                </div>
+                <div class="modal-body">
+                    <p><pre>@Model</pre></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Chiudi</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
