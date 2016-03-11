@@ -25,7 +25,17 @@ namespace SitoDeiSiti
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/font-awesome.min.css",
+                      "~/Content/animate.min.css",
+                      "~/Content/creative.css",
                       "~/Content/site.css"));
+
+
+            bundles.Add(new ScriptBundle("~/bundles/creative").Include(
+                      "~/Scripts/jquery.easing.min.js",
+                      "~/Scripts/jquery.fittext.js",
+                      "~/Scripts/wow.min.js",
+                      "~/Scripts/creative.js"));
         }
     }
 }
