@@ -4,89 +4,46 @@
     ViewBag.Title = "Siti";
 }
     
-    <section class="bg-primary" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Sito dei siti 5L informatica</h2>
-                    <hr class="light">
-                    <p class="text-faded"></p>
-                    <a href="#siti" class="btn btn-default btn-xl page-scroll">Visualizza i siti!</a>
-                </div>
+<section class="bg-dark" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">Sito dei siti 5L informatica</h2>
+                <hr class="light">
+                <p class="text-faded"></p>
+                <a href="#siti" class="btn btn-default btn-xl page-scroll">Visualizza i siti!</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="siti">
-        <div class="container-fluid">
-            <div class="row no-gutter">
-                @{ int cnt = 1; }
-                @Html.Raw("<div class='row'>")
-                @foreach (Sito siti in Model)
-                {
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="thumbnail">
-                            <a href="@siti.Link" class="portfolio-box" style="text-decoration: none">
-                                <center><img style="max-width: 348px; height: 245px;" src="@siti.PhotoLink" class="img-responsive" alt="" onError="this.onerror = null; this.src = 'http://sitodeisiti.gear.host/Content/Images/avatar.jpg';"></center>
-                                <div class="portfolio-box-caption">
-                                    <div class="portfolio-box-caption-content">
-                                        <div class="project-category text-faded">
-                                            @siti.Nome.Split(' ')[1]
-                                        </div>
-                                        <div class="project-name">
-                                            @siti.Nome.Split(' ')[0]
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="caption">
-                                    <center>
-                                        <h3>@siti.Nome.Split(' ')[1]</h3>
-                                        <p>@siti.Nome.Split(' ')[0]</p>
-                                        @*<p><a href="@siti.Link" class="btn btn-primary" role="button" target="_blank">@siti.Nome</a></p>*@
-                                    </center>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    if (cnt % 3 == 0)
-                    {
-                        @Html.Raw("</div>");
-                        @Html.Raw("<br/>");
-                        @Html.Raw("<div class='row'>");
-                    }
-                }
-                @Html.Raw("</div>");
-            </div>
-        </div>
-    </section>
-
-    @*int cnt = 1;
-    @Html.Raw("<div class='row'>");
-    foreach (Sito siti in Model)
-    {
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
-                <center>
-                    <a href="@siti.Link" target="_blank">
-                        <img style="max-width: 348px; height: 245px;" src="@siti.PhotoLink" alt="@siti.Nome" onError="this.onerror = null; this.src = 'http://sitodeisiti.gear.host/Content/Images/avatar.jpg';">
-                    </a>
-                </center>
-                <div class="caption">
-                    <center>
-                        <h3>@siti.Nome.Split(' ')[1]</h3>
-                        <p>@siti.Nome.Split(' ')[0]</p>
-                        <p><a href="@siti.Link" class="btn btn-primary" role="button" target="_blank">@siti.Nome</a></p>
-                    </center>
-                </div>
-            </div>
-        </div>
-
-        if (cnt % 3 == 0)
+<section id="siti">
+    <div class="container body-content">
+        @foreach (Sito siti in Model)
         {
-            @Html.Raw("</div>");
-            @Html.Raw("<br/>");
-            @Html.Raw("<div class='row'>");
+            <div class="col-lg-4 col-sm-6">
+                <div class="thumbnail">
+                    <a href="@siti.Link" class="portfolio-box" style="text-decoration: none">
+                        <center><img style="max-width: 340px; height: 245px;" src="@siti.PhotoLink" class="img-responsive" alt="" onError="this.onerror = null; this.src = 'http://sitodeisiti.gear.host/Content/Images/avatar.jpg';"></center>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    @siti.Nome.Split(' ')[1]
+                                </div>
+                                <div class="project-name">
+                                    @siti.Nome.Split(' ')[0]
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <center>
+                                <h3>@siti.Nome.Split(' ')[1]</h3>
+                                <p>@siti.Nome.Split(' ')[0]</p>
+                            </center>
+                        </div>
+                    </a>
+                </div>
+            </div>
         }
-        cnt++;
-    }
-    @Html.Raw("</div>");*@
+    </div>
+</section>
